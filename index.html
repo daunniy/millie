@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>밀리의 서재</title>
+	<link rel="stylesheet" href="css/style.css">
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/gsap.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/ScrollTrigger.min.js"></script>
+</head>
+<body>
+  <div class="custom-cursor"></div>
+  <div class="cursor-follower"></div>
+  <section class="millie">
+		<h1 class="millie-title">밀리의 서재</h1>
+    <div class="millie-content">
+      <h2 class="millie-subtitle" id="highlight-text">독서와 무제한 친해지리,<br>사람들의 일상을 조금 더 가치 있고 즐겁게</h2>
+      <p class="millie-subtitle">책과 함께 일상을 조금 더 가치 있게 만드는 모든 일,<br>바로 밀리가 생각하는 독서입니다.</p>
+      <a href="#contact" class="millie-cta">문의하기</a>
+    </div>
+  </section>
+
+  <section class="projects">
+    <h2 class="section-title">관심 분야에 있는 책을<br>딱 골라드려요</h2>
+    <div class="filter-container">
+      <button class="filter-btn active" data-filter="all">전체</button>
+      <button class="filter-btn" data-filter="best">베스트</button>
+      <button class="filter-btn" data-filter="stock">주식</button>
+      <button class="filter-btn" data-filter="en">영어</button>
+      <button class="filter-btn" data-filter="classic">고전</button>
+      <button class="filter-btn" data-filter="cook">요리</button>
+    </div>
+
+    <div class="projects-grid">
+      <div class="project-card" data-category="best">
+      	<div class="project-image">
+          <img src="image/best1.webp" alt="best1">
+        </div>
+        <div class="project-content">
+          <div class="project-category">베스트</div>
+            <h3 class="project-title">트렌드 코리아 2025</h3>
+            <p class="project-description">김난도, 전미영, 최지혜, 권정윤, 한다혜, 이혜원, 이준영, 이향은, 추예린, 전다현 지음</p>
+          </div>
+        </div>
+
+            <div class="project-card" data-category="stock">
+                <div class="project-image">
+                    <img src="image/stock1.webp" alt="stock1">
+                </div>
+                <div class="project-content">
+                    <div class="project-category">주식</div>
+                    <h3 class="project-title">주린이가 가장 알고 싶은 최다질문 TOP 77</h3>
+                    <p class="project-description">원앤원컨텐츠그룹</p>
+                </div>
+            </div>
+
+            <div class="project-card" data-category="en">
+                <div class="project-image">
+                    <img src="image/en1.webp" alt="en1">
+                </div>
+                <div class="project-content">
+                    <div class="project-category">영어</div>
+                    <h3 class="project-title">야나두 영어회화</h3>
+                    <p class="project-description">타인의 취향</p>
+                </div>
+            </div>
+
+            <div class="project-card" data-category="classic">
+                <div class="project-image">
+                    <img src="image/classic1.webp" alt="classic1">
+                </div>
+                <div class="project-content">
+                    <div class="project-category">고전</div>
+                    <h3 class="project-title">인간실격·사양</h3>
+                    <p class="project-description">문예출판사</p>
+                </div>
+            </div>
+
+            <div class="project-card" data-category="cook">
+                <div class="project-image">
+                    <img src="image/cook1.webp" alt="cook1">
+                </div>
+                <div class="project-content">
+                    <div class="project-category">요리</div>
+                    <h3 class="project-title">최강록의 요리 노트</h3>
+                    <p class="project-description">최강록</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="stats-section">
+      <div class="stats-grid">
+          <div class="stat-item">
+              <div class="stat-number" data-target="8200000">0</div>
+              <div class="stat-label">누적 회원 수</div>
+          </div>
+          <div class="stat-item">
+              <div class="stat-text">1위</div>
+              <div class="stat-label">베스트 셀러/신간 보유</div>
+          </div>
+          <div class="stat-item">
+              <div class="stat-number" data-target="190000">0</div>
+              <div class="stat-label">보유 콘텐츠</div>
+          </div>
+          <div class="stat-item">
+              <div class="stat-number" data-target="2300">0</div>
+              <div class="stat-label">파트너 출판사</div>
+          </div>
+      </div>
+  </section>
+
+
+  <section class="content-section">
+    <h2 class="section-title">콘텐츠</h2>
+    <div class="content-grid">
+            <div class="content-item">
+                <div class="content-image">
+                    <img src="image/contents_1.webp" alt="Innovation Process">
+                </div>
+                <div class="content-text">
+                    <h3 class="content-title">전자책</h3>
+                    <p class="content-description">
+                      소설, 에세이, 인문사회, 경제경영, 세계문학전집부터<br>판타지 무협, 로맨스, BL 등 장르 소설과 매거진까지!
+                    </p>
+                </div>
+            </div>
+            <div class="content-item">
+                <div class="content-image">
+                    <img src="image/contents_2.webp" alt="Technology Stack">
+                </div>
+                <div class="content-text">
+                    <h3 class="content-title">오디오 콘텐츠</h3>
+                    <p class="content-description">
+                      세상에서 가장 교양있는 수면제, 오디오북!<br>귀로 들어 더 실감나는 스토리, 오디오드라마도 함께!
+                    </p>
+                    <div class="tech-stack">
+                        <span class="tech-badge">셀럽</span>
+                        <span class="tech-badge">저자</span>
+                        <span class="tech-badge">성우</span>
+                        <span class="tech-badge">AI</span>
+                    </div>
+                </div>
+            </div>
+            <div class="content-item">
+                <div class="content-image">
+                    <img src="image/contents_3.webp" alt="Innovation Process">
+                </div>
+                <div class="content-text">
+                    <h3 class="content-title">챗북</h3>
+                    <p class="content-description">
+                      책의 내용을 채팅 대화처럼 톡톡!<br>MZ세대를 겨냥한 새로운 독서 콘텐츠
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+  <section class="timeline-section">
+    <h2 class="section-title">연혁</h2>
+    <div class="timeline">
+      <div class="timeline-item">
+        <div class="timeline-content">
+        	<div class="timeline-date">2016~2018</div>
+          <strong>전자책 정기구독,<br>밀리가 처음 시작했습니다</strong>
+        </div>
+        <div class="sub-timeline">
+          <div class="timeline-item">
+            <div class="sub-timeline-date">2016.07</div>
+            <p>밀리의 서재 설립</p>
+          </div>
+          <div class="timeline-item">
+            <div class="sub-timeline-date">2017.10</div>
+            <p>국내 최초 월정액 구독 서비스 정식 오픈</p>
+          </div>
+          <div class="timeline-item">
+            <div class="sub-timeline-date">2018.07</div>
+            <p>무제한 서비스 시작</p>
+          </div>
+        </div>
+      </div>
+      <div class="timeline-item">
+        <div class="timeline-content">
+          <div class="timeline-date">2018~2019</div>
+          <strong>사람들이 일상에서 독서와<br>친해지기 시작했습니다</strong>
+        </div>
+        <div class="sub-timeline">
+          <div class="timeline-item">
+            <div class="sub-timeline-date">2018.10</div>
+            <p>배우 이병헌, 변요한 출연 TV CF 공개</p>
+          </div>
+          <div class="timeline-item">
+            <div class="sub-timeline-date">2017.10</div>
+            <p>2019 에피어워드코리아 대상 수상</p>
+          </div>
+          <div class="timeline-item">
+            <div class="sub-timeline-date">2018.07</div>
+            <p>신용보증기금 혁신아이콘 1기 선정</p>
+          </div>
+          <div class="timeline-item">
+            <div class="sub-timeline-date">2019.12</div>
+            <p>Google Play 선정 올해를 빛낸 앱 자기계발 부문 최우수상 수상</p>
+          </div>
+        </div>
+      </div>
+      <div class="timeline-item">
+        <div class="timeline-content">
+          <div class="timeline-date">2020</div>
+          <strong>새 시대, 새 독서를 위해<br>밀리의 도전을 이어갔습니다</strong>
+        </div>
+        <div class="sub-timeline">
+          <div class="timeline-item">
+            <div class="sub-timeline-date">2020.02</div>
+            <p>김영하 작가 7년만의 장편소설 &lt;작별인사&gt; 밀리의 서재<br>오리지널 콘텐츠로 선출간</p>
+          </div>
+          <div class="timeline-item">
+            <div class="sub-timeline-date">2020.11</div>
+            <p>밀리의 서재 자체 개발 뷰어 공개</p>
+          </div>
+          <div class="timeline-item">
+            <div class="sub-timeline-date">2020.12</div>
+            <p>새로운 독서 지표 ‘완독지수’ 개발</p>
+          </div>
+        </div>
+      </div>
+      <div class="timeline-item">
+        <div class="timeline-content">
+        	<div class="timeline-date">2021~2022</div>
+          	<strong>점점 더 많은 사람들에게<br>독서를 전파하였습니다</strong>
+        	</div>
+          <div class="sub-timeline">
+            <div class="timeline-item">
+              <div class="sub-timeline-date">2021.03</div>
+              <p>배우 조정석 출연 TV CF 공개</p>
+            </div>
+            <div class="timeline-item">
+              <div class="sub-timeline-date">2021.09</div>
+              <p>밀리의 서재, 지니뮤직으로 인수되며 KT그룹사로 편입</p>
+            </div>
+            <div class="timeline-item">
+              <div class="sub-timeline-date">2021.12</div>
+              <p>Google Play 선정 ‘2021 올해의 앱’</p>
+            </div>
+            <div class="timeline-item">
+              <div class="sub-timeline-date">2022.10</div>
+              <p>오디오 드라마&lt;어서 오세요, 휴남동 서점입니다&gt; 공개</p>
+            </div>
+          </div>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-content">
+          	<div class="timeline-date">2023~</div>
+          	<strong>콘텐츠를 즐기는 모든 이들에게<br>독서의 가치를 1밀리 더하는 중입니다.</strong>
+        	</div>
+          <div class="sub-timeline">
+            <div class="timeline-item">
+              <div class="sub-timeline-date">2023.01</div>
+              <p>도슨트북 &lt;위대한 개츠비&gt; 공개</p>
+            </div>
+            <div class="timeline-item">
+              <div class="sub-timeline-date">2023.04</div>
+              <p>멀티 미디어 영상형 독서 콘텐츠 오브제북 론칭</p>
+            </div>
+            <div class="timeline-item">
+              <div class="sub-timeline-date">2023.05</div>
+              <p>창작 플랫폼 ‘밀리로드’ 베타 운영 시작</p>
+            </div>
+            <div class="timeline-item">
+              <div class="sub-timeline-date">2023.07</div>
+              <p>정보보호관리체계(ISMS) 인증 획득</p>
+            </div>
+            <div class="timeline-item">
+              <div class="sub-timeline-date">2023.08</div>
+              <p>밀리 오리지널 종이책 &lt;나는 왜 자꾸 내탓을 할까&gt; 첫 출간</p>
+            </div>
+            <div class="timeline-item">
+              <div class="sub-timeline-date">2023.09</div>
+              <p>코스닥 상장</p>
+            </div>
+            <div class="timeline-item">
+              <div class="sub-timeline-date">2023.12</div>
+              <p>제휴 출판사 2,000곳 돌파</p>
+            </div>
+          </div>
+        </div>
+    	</div>
+  </section>
+
+  <section class="contact" id="contact">
+    <h2 class="section-title">문의</h2>
+    <form class="contact-form">
+      <div class="form-group">
+        <input type="text" placeholder="이름" required>
+      </div>
+      <div class="form-group">
+        <input type="email" placeholder="이메일" required>
+      </div>
+      <div class="form-group">
+        <textarea rows="5" placeholder="내용을 입력해주세요!" required></textarea>
+      </div>
+      <button type="submit">문의하기</button>
+    </form>
+  </section>
+	<script src="js/script.js"></script>
+</body>
+</html>
