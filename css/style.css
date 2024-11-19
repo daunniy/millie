@@ -243,7 +243,6 @@ h2.millie-subtitle {
 
 .contact {
   text-align: center;
-  background: white;
 }
 
 .section-title {
@@ -267,29 +266,34 @@ input, textarea {
   width: 100%;
   padding: 1rem;
   border:none;
-  border-bottom: 2px solid var(--secondary);
+  border: 2px solid rgba(0,0,0,0.1);
+  border-radius: 10px;
   font-size: 1rem;
   transition: border-color 0.3s ease;
 }
 
 input:focus, textarea:focus {
-  border-color: var(--accent);
+  border-color: rgba(0,0,0,0.7);;
   outline: none;
 }
 
 button {
   padding: 1rem 2rem;
-  background: var(--accent);
-  color: white;
+  background: #F2E088;
   border: none;
   border-radius: 8px;
   font-size: 1rem;
   cursor: pointer;
-  transition: transform 0.3s ease;
+  transition: all .5s ease;
 }
 
 button:hover {
   transform: translateY(-5px);
+}
+
+.contact-form button:hover {
+  background: #262626;
+  color: white;
 }
 
 .timeline {
