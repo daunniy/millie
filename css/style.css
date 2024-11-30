@@ -163,10 +163,14 @@ h2.millie-subtitle {
 
 .projects-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(145px, 1fr));
-  align-items:end;
+  grid-template-columns: repeat(auto-fit, minmax(80px, 1fr));
+  align-items:flex-start;
   gap: 2rem;
   opacity: 0;
+
+  overflow-x: auto; /* 가로 스크롤 활성화 */
+  overflow-y: hidden; /* 세로 스크롤 비활성화 */
+  width: 100%; /* 부모 요소를 기준으로 폭 설정 */
 }
 
 .project-card {
@@ -307,6 +311,11 @@ button:hover {
 
 
 @media (max-width: 768px) {
+  /* 모바일 전용 스타일 */
+  html {
+    width: 100vw;
+  }
+
   .millie-title {
     font-size: 2.5rem;
   }
@@ -316,25 +325,44 @@ button:hover {
   }
 
   h2.millie-subtitle {
-    font-size:2rem;
+    font-size: 2rem;
   }
 
   .projects h2 {
-    font-size:2rem; margin:40px 0;
+    font-size: 2rem;
+    margin: 40px 0;
   }
 
   .filter-container {
-      flex-wrap: wrap;
+    flex-wrap: wrap;
   }
 
   .projects-grid {
+    overflow-x: auto; /* 가로 스크롤 활성화 */
+    white-space: nowrap; /* 요소가 한 줄에 유지되도록 설정 */
+    grid-template-columns: none; /* 자동 폭 해제 */
+    display: flex; /* 플렉스 박스로 변경 */
+  }
 
+  .project-card {
+    max-width: 140px;
+  }
+
+  .project-title {
+    white-space: nowrap; /* 줄바꿈 방지 */
+    overflow: hidden; /* 넘치는 내용 숨김 */
+    text-overflow: ellipsis; /* 줄임표 표시 */
   }
 
   .stat-number {
-      font-size: 2rem;
+    font-size: 2rem;
+  }
+
+  .project-description {
+    display: none;
   }
 }
+
 
 .particle {
   position: absolute;
@@ -417,7 +445,17 @@ button:hover {
   .content-grid {
       grid-template-columns: 1fr;
   }
+
+  .sub-timeline {
+    display: none;
+  }
+
+  .timeline::before {
+    display: none;
+  }
 }
+
+
 
 /* Timeline section styles */
 .timeline-section {
@@ -484,7 +522,8 @@ button:hover {
 }
 
 .sub-timeline .timeline-item {
-  justify-content:flex-start; gap:30px;
+  justify-content:flex-start;
+  gap:30px;
 }
 
 .sub-timeline p:last-of-type {
